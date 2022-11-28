@@ -5,13 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
+    "gray-matter": "^4.0.3",
     "next": "13.0.2",
+    "next-mdx-remote": "^4.2.0",
+    "pygments-css": "^1.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }
