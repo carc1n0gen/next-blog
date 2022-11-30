@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
             <Link href="/archive" className={router.pathname === '/archive' ? 'active' : null}>Archive</Link>
             <Link href="/contact" className={router.pathname === '/contact' ? 'active' : null}>Contact</Link>
             <form className="site-search" action="/search" onSubmit={onSubmit}>
-              <input type="text" id="q" name="q" className={`site-search-input ${isSearchInvalid ? 'invalid' : ''}`} placeholder="Search for posts" aria-label="Search" value={searchValue} onChange={({target}) => setSearchValue(target.value)} />
+              <input type="text" id="q" name="q" className={`site-search-input ${isSearchInvalid ? 'invalid' : ''}`} placeholder="Search for posts" aria-label="Search" value={searchValue} onChange={({ target }) => setSearchValue(target.value)} />
               <span className="search-feedback">Search query must be at least three characters.</span>
               <button type="submit" className="site-search-submit"><i className="fas fa-search"></i><span className="site-search-submit-text"> Search</span></button>
             </form>
@@ -58,11 +58,12 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
       <footer className="site-footer">
-        &copy; Carson Evans
+        &copy; Carson
         <Link href="https://twitter.com/carc1n0gen" className="footer-social-link"><i className="fab fa-twitter" aria-hidden="true"></i><span className="sr-only">twitter</span></Link>
         <Link href="https://github.com/carc1n0gen" className="footer-social-link"><i className="fab fa-github" aria-hidden="true"></i><span className="sr-only">github</span></Link>
         <Link href="https://blog.carsonevans.ca/feed.xml" className="footer-social-link"><i className="fa fa-rss" aria-hidden="true"></i><span className="sr-only">feed</span></Link>
       </footer>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </>
   )
 }

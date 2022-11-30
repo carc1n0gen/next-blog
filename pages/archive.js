@@ -11,7 +11,7 @@ export default function Archive({ posts }) {
 
       years[post.year].push(post)
     })
-    
+
     return years
   }, [posts])
 
@@ -25,12 +25,13 @@ export default function Archive({ posts }) {
 
   return Object.keys(organizedPosts).map((year) => (
     <section className="card" key={year}>
-      <h2 className="archive-year" id={`${year}-ref`}>
+      <h2 className="archive-year" id={`${year}-anchor`}>
         {year}
-        <Link href={`#${year}-ref`}>
+        <Link href={`#${year}-anchor`} className="heading-anchor">
           <i className="fas fa-link" aria-hidden="true"></i>
           <span className="sr-only">link to this heading</span>
-        </Link></h2>
+        </Link>
+      </h2>
       <ul>
         {organizedPosts[year].map((post) => (
           <li key={post.url}><Link className="archive-link" href={post.url}>{post.title}</Link></li>
