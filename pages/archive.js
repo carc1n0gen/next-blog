@@ -23,7 +23,7 @@ export default function Archive({ posts }) {
     )
   }
 
-  return Object.keys(organizedPosts).map((year) => (
+  return Object.keys(organizedPosts).reverse().map((year) => (
     <section className="card" key={year}>
       <h2 className="archive-year" id={`${year}-anchor`}>
         {year}

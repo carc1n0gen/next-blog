@@ -1,7 +1,12 @@
 import { MDXRemote } from 'next-mdx-remote'
 
 
-export default function Home({post}) {
+const components = {
+
+}
+
+
+export default function Home({ post }) {
   return (
     <article className="post">
       <header className="post-title">
@@ -13,7 +18,7 @@ export default function Home({post}) {
         </span>
       </header>
       <section>
-        <MDXRemote {...post.contentMdx} />
+        <MDXRemote {...post.contentMdx} components={components} />
       </section>
       {/* <footer>
         
@@ -23,8 +28,8 @@ export default function Home({post}) {
 }
 
 
-export async function getStaticProps({params: {year, month, day, slug}}) {
-  const { getPost } = await require('lib/posts')
+export async function getStaticProps({ params: { year, month, day, slug } }) {
+  const { getPost } = await import('lib/posts')
   const post = await getPost(year, month, day, slug)
 
   return {

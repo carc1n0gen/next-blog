@@ -3,7 +3,6 @@ import { useCallback, useState } from "react"
 
 export default function Contact() {
   const router = useRouter()
-
   const [subject, setSubject] = useState('Blog contact form submition')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')

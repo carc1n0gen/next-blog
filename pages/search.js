@@ -4,8 +4,8 @@ import { useMemo } from "react"
 import { MDXRemote } from 'next-mdx-remote'
 
 
-export default function Search({posts=[]}) {
-  const router= useRouter()
+export default function Search({ posts = [] }) {
+  const router = useRouter()
   const searchWords = router.query.q || ''
   const filteredPosts = useMemo(() => {
     return posts.filter(
@@ -43,7 +43,7 @@ export default function Search({posts=[]}) {
 }
 
 export async function getStaticProps() {
-  const { getAllPosts } = await require('lib/posts')
+  const { getAllPosts } = await import('lib/posts')
   const posts = await getAllPosts()
 
   return {
