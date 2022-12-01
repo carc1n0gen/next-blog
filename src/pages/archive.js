@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 import { useMemo } from 'react'
 
 
@@ -19,6 +20,9 @@ export default function Archive({ posts }) {
   if (Object.keys(organizedPosts).length === 0) {
     return (
       <div className="card">
+        <Head>
+          <title>Archive | Carson's Blog</title>
+        </Head>
         <p>There is nothing here.</p>
       </div>
     )
@@ -26,6 +30,9 @@ export default function Archive({ posts }) {
 
   return Object.keys(organizedPosts).reverse().map((year) => (
     <section className="card" key={year}>
+      <Head>
+        <title>Archive | Carson's Blog</title>
+      </Head>
       <h2 className="archive-year" id={`${year}-anchor`}>
         {year}
         <a href={`#${year}-anchor`} className="heading-anchor">

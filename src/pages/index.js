@@ -1,10 +1,14 @@
 import Link from 'next/link'
+import Head from 'next/head'
 import { MDXRemote } from 'next-mdx-remote'
 
 
-export default function Home({recentPosts = []}) {
+export default function Home({ recentPosts = [] }) {
   return (
     <>
+      <Head>
+        <title>Carson's Blog</title>
+      </Head>
       {recentPosts.map((post) => (
         <article className="post" key={post.url}>
           <header className="post-title">

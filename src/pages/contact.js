@@ -1,5 +1,7 @@
-import { useRouter } from "next/router"
-import { useCallback, useState } from "react"
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { useCallback, useState } from 'react'
+
 
 export default function Contact() {
   const router = useRouter()
@@ -40,6 +42,9 @@ export default function Contact() {
 
   return (
     <section className="card">
+      <Head>
+        <title>Contact | Carson's Blog</title>
+      </Head>
       <p>Fill out this form to send me an email, and I will get back to you ASAP.</p>
       <form action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORM_SPREE_ID}`} method="POST" className="form" onSubmit={onSubmit}>
         <input type="hidden" name="subject" value={subject} />

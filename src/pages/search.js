@@ -1,6 +1,7 @@
-import { useRouter } from "next/router"
+import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { useMemo } from "react"
+import Head from 'next/head'
+import { useMemo } from 'react'
 import { MDXRemote } from 'next-mdx-remote'
 
 
@@ -16,6 +17,9 @@ export default function Search({ posts = [] }) {
   if (filteredPosts.length === 0) {
     return (
       <div className="card">
+        <Head>
+          <title>Search | Carson's Blog</title>
+        </Head>
         <p>There is nothing here.</p>
       </div>
     )
@@ -23,6 +27,9 @@ export default function Search({ posts = [] }) {
 
   return filteredPosts.map(post => (
     <article className="post" key={post.url}>
+      <Head>
+        <title>Search | Carson's Blog</title>
+      </Head>
       <header className="post-title">
         <Link href={post.url}><h1>{post.title}</h1></Link>
       </header>
