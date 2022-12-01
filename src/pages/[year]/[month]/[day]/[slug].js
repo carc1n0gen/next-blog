@@ -1,8 +1,9 @@
 import { MDXRemote } from 'next-mdx-remote'
+import CodeSnippet from 'components/CodeSnippet'
 
 
 const components = {
-
+  pre: CodeSnippet
 }
 
 
