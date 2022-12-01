@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useMemo } from 'react'
 
+
 export default function Archive({ posts }) {
   const organizedPosts = useMemo(() => {
     const years = {}

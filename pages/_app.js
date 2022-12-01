@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/router'
-
 import 'styles/globals.css'
 
 

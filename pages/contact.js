@@ -11,7 +11,7 @@ export default function Contact() {
   const nameOnChange = useCallback(({ target }) => {
     setSubject(`Blog contact form submission from ${target.value}`)
     setName(target.value)
-  }, [name, setSubject])
+  }, [setSubject])
 
   const onSubmit = useCallback(async (event) => {
     event.preventDefault()
@@ -36,7 +36,7 @@ export default function Contact() {
       console.error(error)
       router.push('/uhoh')
     }
-  }, [])
+  }, [router])
 
   return (
     <section className="card">

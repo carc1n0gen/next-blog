@@ -42,6 +42,7 @@ export default function Search({ posts = [] }) {
   ))
 }
 
+
 export async function getStaticProps() {
   const { getAllPosts } = await import('lib/posts')
   const posts = await getAllPosts()
