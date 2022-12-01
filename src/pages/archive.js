@@ -28,10 +28,10 @@ export default function Archive({ posts }) {
     <section className="card" key={year}>
       <h2 className="archive-year" id={`${year}-anchor`}>
         {year}
-        <Link href={`#${year}-anchor`} className="heading-anchor">
+        <a href={`#${year}-anchor`} className="heading-anchor">
           <i className="fas fa-link" aria-hidden="true"></i>
           <span className="sr-only">link to this heading</span>
-        </Link>
+        </a>
       </h2>
       <ul>
         {organizedPosts[year].map((post) => (

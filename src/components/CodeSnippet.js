@@ -1,4 +1,5 @@
-import Highlight, { defaultProps } from "prism-react-renderer";
+import Highlight, { defaultProps } from 'prism-react-renderer'
+import theme from 'prism-react-renderer/themes/nightOwl'
 
 
 export default function CodeSnippet({ children }) {
@@ -7,7 +8,12 @@ export default function CodeSnippet({ children }) {
   const language = className.replace(/language-/, "");
 
   return (
-    <Highlight {...defaultProps} code={code} language={language}>
+    <Highlight
+      {...defaultProps}
+      code={code}
+      language={language}
+      theme={theme}
+    >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={style}>
           {tokens.map((line, i) => (
