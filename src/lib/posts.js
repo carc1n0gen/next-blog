@@ -10,7 +10,7 @@ const POSTS_DIR = join(process.cwd(), 'posts')
 
 export async function getPost(year, month, day, slug) {
   const rawSource = await fs.readFile(join(POSTS_DIR, `${year}-${month}-${day}-${slug}.mdx`), 'utf8')
-  const { data, excerpt, content } = matter(rawSource, { excerpt_separator: '{/* end */}' })
+  const { data, excerpt, content } = matter(rawSource, { excerpt_separator: '{/* excerpt */}' })
   const title = slug.replaceAll('-', ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
   const date = new Date(Date.parse(`${year}-${month}-${day}`))
   const url = `/${year}/${month}/${day}/${slug}`
