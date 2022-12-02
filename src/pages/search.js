@@ -18,7 +18,7 @@ export default function Search({ posts = [] }) {
     return (
       <div className="card">
         <Head>
-          <title>Search | Carson's Blog</title>
+          <title>Search | Carson&apos;s Blog</title>
         </Head>
         <p>There is nothing here.</p>
       </div>
@@ -28,7 +28,7 @@ export default function Search({ posts = [] }) {
   return filteredPosts.map(post => (
     <article className="post" key={post.url}>
       <Head>
-        <title>Search | Carson's Blog</title>
+        <title>Search | Carson&apos;s Blog</title>
       </Head>
       <header className="post-title">
         <Link href={post.url}><h1>{post.title}</h1></Link>

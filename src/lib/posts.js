@@ -1,4 +1,4 @@
-import fs from 'fs/promises';
+import fs from 'fs/promises'
 import { join } from 'path'
 import matter from 'gray-matter'
 import remarkGfm from 'remark-gfm'
@@ -52,7 +52,7 @@ export async function getAllPosts() {
 
 export async function getRecentPosts() {
   const allPosts = await getAllPosts()
-  return allPosts.slice(0, 5);
+  return allPosts.slice(0, 5)
 }
 
 

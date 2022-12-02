@@ -1,9 +1,9 @@
 function getAnchor(text) {
   if (Array.isArray(text)) {
-    return text.join(' ').toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/[ ]/g, '-');
+    return text.join(' ').toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/[ ]/g, '-')
   }
 
-  return text.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/[ ]/g, '-');
+  return text.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/[ ]/g, '-')
 }
 
 

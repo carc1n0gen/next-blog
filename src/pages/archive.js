@@ -21,7 +21,7 @@ export default function Archive({ posts }) {
     return (
       <div className="card">
         <Head>
-          <title>Archive | Carson's Blog</title>
+          <title>Archive | Carson&apos;s Blog</title>
         </Head>
         <p>There is nothing here.</p>
       </div>
@@ -31,7 +31,7 @@ export default function Archive({ posts }) {
   return Object.keys(organizedPosts).reverse().map((year) => (
     <section className="card" key={year}>
       <Head>
-        <title>Archive | Carson's Blog</title>
+        <title>Archive | Carson&apos;s Blog</title>
       </Head>
       <h2 className="archive-year" id={`${year}-anchor`}>
         {year}
