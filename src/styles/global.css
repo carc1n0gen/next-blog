@@ -54,27 +54,23 @@ table {
     width: 100%;
     text-align: left;
     border-collapse: collapse;
-    /* border: 1px solid #e8e8e8; */
+    margin-bottom: 2rem;
 }
 
-/* table th {
-    background-color: #f0f0f0;
-    border: 1px solid #e0e0e0;
+table th {
+    border-bottom: 6px solid #e0e0e0;
 }
 
-table th,
-table td {
-    padding: 10px 15px;
-}
-
-table td {
-    border: 1px solid #e8e8e8;
-}
 
 table th,
 table td {
-    padding: 10px 15px;
-} */
+    padding: 0.5rem;
+}
+
+
+table td {
+    border-bottom: 2px solid #e0e0e0;
+}
 
 .heading-anchor {
     margin-left: 0.5rem;
