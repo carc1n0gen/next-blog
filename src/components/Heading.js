@@ -1,14 +1,13 @@
-function getAnchor(text) {
-  if (Array.isArray(text)) {
-    return text.join(' ').toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/[ ]/g, '-')
-  }
-
-  return text.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/[ ]/g, '-')
-}
+import { useMemo } from 'react'
 
 
 export default function Heading({ as: Component, children }) {
-  const anchor = getAnchor(children)
+  const anchor = useMemo(() => {
+    if (Array.isArray(children)) {
+      return children.join(' ').toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/[ ]/g, '-')
+    }
+    return children.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/[ ]/g, '-')
+  }, [children])
 
   return (
     <Component id={anchor}>
