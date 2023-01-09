@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <header className="site-header">
         <div className="container">
-          <Link href="/"><h1 className="site-title">Carson&apos;s Blog</h1></Link>
+          <Link href="/"><h1 className="site-title">Carson's Blog</h1></Link>
           <p>Somewhat coherent tutorials about web stuff and things.</p>
         </div>
         <nav className="site-nav">

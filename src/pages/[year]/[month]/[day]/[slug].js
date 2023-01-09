@@ -19,7 +19,7 @@ export default function Home({ post }) {
   return (
     <article className="post">
       <Head>
-        <title>{post.title} | Carson&apos;s Blog</title>
+        <title>{post.title} | Carson's Blog</title>
       </Head>
       <header className="post-title">
         <h1>{post.title}</h1>
